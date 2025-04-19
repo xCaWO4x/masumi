@@ -2,7 +2,7 @@ from crewai import Agent, Crew, Task
 from composio_crewai import ComposioToolSet, App
 
 
-toolset = ComposioToolSet(api_key="a0lvtzodkm6rhnj17ezath")
+toolset = ComposioToolSet(api_key=os.getenv(COMPOSIO_API_KEY))
 tools = toolset.get_tools(apps=[App.GMAIL])
 
 # check list of email tools that are available
